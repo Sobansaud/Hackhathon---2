@@ -2,13 +2,13 @@
 const nextConfig = {
   typedRoutes: true,
   images: {
-    domains: ['localhost', 'example.com'], // Add your image domains here
+    remotePatterns: [
+      { hostname: 'localhost' },
+      { hostname: 'example.com' }
+    ],
   },
     typescript: {
     ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
   async headers() {
     return [
